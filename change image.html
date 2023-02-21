@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Change Image</title>
+     <script type="text/javascript">
+
+          var color = ['blue', 'green', 'pink', 'red', 'orange']
+          var count = 0;
+          function fun1() {
+               var li = document.createElement("li");
+               var val = document.createTextNode(color[count]);
+               li.appendChild(val);
+               li.style.color = color[j];
+               list.appendChild(li);
+               if (count == color.length - 1) {
+                    count = 0;
+               }
+               count++;
+
+          }
+
+          var j = 0;
+          function fun2() {
+               j++;
+               if (j < 6) {
+                    var li = document.createElement('li');
+                    var val = document.createTextNode(j);
+                    li.appendChild(val);
+                    li.style.color = color[j];
+                    list1.appendChild(li);
+               }
+               else {
+                    alert("list is full now");
+               }
+          }
+     </script>
+</head>
+
+<body>
+     <button onclick="fun1()">Add color</button>
+     <button onclick="fun2()">Add number</button>
+     <hr>
+     <ul id="list"></ul>
+     <hr>
+     <ul id="list1"></ul>
+
+
+</body>
+
+</html>

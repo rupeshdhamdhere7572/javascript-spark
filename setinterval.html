@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h3 id='hed'></h3>
+	<button onclick="fun()">start</button>
+	<script type="text/javascript">
+		// click start button and show welcome student
+		// function fun() 
+		// {
+		// 	setInterval(function(){
+		// 		document.write('welcome student!!<br>');
+		// 	},1000);
+		// }
+
+		//without using button show hello student
+		// function fun1() {
+			
+		// 	document.write('hello student!!<br>')
+		// }
+		// setInterval(fun1,3000);
+
+		// time show
+		var count=1;
+		function fun1(){
+			
+			var d = new Date();
+			var t = d.toLocaleTimeString();
+			//document.write(d+' <br>'); // show all date
+			// document.write(t+' <br>'); //only show time
+			if(count==5)
+			{
+				clearInterval(t1);
+			}
+			document.write(t+'<br>');
+			count++;
+			// document.getElementById('hed').innerHTML=t;
+		}
+		var t1=setInterval(fun1,1000);
+
+	</script>
+</body>
+</html>

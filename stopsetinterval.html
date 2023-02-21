@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h3 id='hed'></h3>
+	<button onclick="start()">start</button>
+	<button onclick="stop()">stop</button>
+	<button id='btn'>AddEventListener</button>
+	<button onclick="timeout()">SetTimeout</button>
+		<button onclick="showing()">ShowImage</button>
+
+	<script type="text/javascript">
+		var t1;
+		setTimeout(f4,1000);
+		function f4()
+		{
+			alert("set time out");
+		}
+		document.getElementById('btn').addEventListener('click',f);
+		document.getElementById('btn').addEventListener('mouseover',f1);
+		document.getElementById('btn').addEventListener('mouseout',f2);
+		function f()
+		{
+			document.getElementById('hed').innerHTML='Mouse Clicked';
+		}
+		function f1()
+		{
+			document.getElementById('hed').innerHTML='Mouse Over';
+		}
+		function f2()
+		{
+			document.getElementById('hed').innerHTML='Mouse Out';
+		}
+		function start()
+		{
+			t1=setInterval(function(){
+				var d = new Date();
+				var t = d.toLocaleTimeString();
+				document.getElementById('hed').innerHTML=t;
+
+			},1000);
+		}
+			function stop()
+			{
+				clearInterval(t1);
+			}
+		
+	</script>
+</body>
+</html>

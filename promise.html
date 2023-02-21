@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script type="text/javascript">
+          const myPromise = new Promise(resolve, reject)=> {
+               let condition = 9;
+               if (condition < 0) {
+                    resolve('promise is resolve successfully and then() method will be called'
+     }
+               else {
+                    reject('promise is rejected and cath()method will be called');
+               }
+
+          });
+          myPromise.then((message) => {
+               console.log("promise is" + fromResolve);
+          }).cath(function (fromReject) {
+               console.log("promise is" + fromReject);
+          });
+     </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

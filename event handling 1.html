@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event handling</title>
+    <script type="text/javascript">
+      //event handling -onclick,onmouseover,onmouseout,onmouseenter,onmouseleave,onkeypress,onkeydown,onfocus,onblur,onload,onselect,andblick
+      function clickfun() {
+        alert("clicked event called");
+      }
+      function overfun() {
+        alert(" mouseover event called");
+      }
+      function outfun() {
+        alert("mouseout Event called");
+      }
+      function mouseleave() {
+        alert("mouseleave event called");
+      }
+      function dbClick() {
+        alert("doubleclick Event called");
+      }
+      function mouseenter() {
+        alert("mouse enter Event called");
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" /><br /><br />
+
+    <button onclick="clickfun()">Click Event button</button>
+    <button onmouseover="overfun()">Mouseover Button</button>
+
+    <button onmouseout="outfun()">Mouseout Event button</button>
+
+    <button onmouseleave="mouseleave()">MouseleaveClick button</button>
+
+    <button ondblclick="dbClick()">dbClick Event button</button>
+    <button onmouseenter="mouseenter()">MouseEnter Event button</button>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faulty calculator</title>
+    <script type="text/javascript">
+        //half faulty calculator
+        // 56 + 7=555
+        // 45 / 5=10
+        // 67 * 9=1000
+        function fun() {
+            var a = parseInt(f1.t1.value);
+            var b = parseInt(f1.t2.value);
+            var opr = f1.opr.value;
+            var res;
+
+            if (a == 56 && b == 7 && opr == '+') {
+                document.write("<h2 style='color:green'>result:-555</h2>");
+            }
+            else if (a == 45 && b == 5 && opr == '/') {
+                document.write("<h2 style='color:green'>result:-455</h2>");
+            }
+            else if (a == 67 && b == 9 && opr == '*') {
+                document.write("<h2 style='color:green'>result:-1000</h2>");
+            }
+            else if (opr == "+") {
+                res = a + b;
+                document.write("<h2 style='color:green'>result:-" + res + "</h2>");
+            }
+            else if (opr == "/") {
+                res = a / b;
+                document.write("<h2 style='color:green'>result:-" + res + "</h2>");
+            }
+            else {
+                document.write("<h2 style='color:red'> wrong operator</h2>");
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <form name="f1">
+        <table>
+            <tr>
+                <td>enter first number</td>
+                <td><input type="text" name="t1"></td>
+            </tr>
+            <tr>
+                <td>enter second number</td>
+                <td><input type="text" name="t2"></td>
+            </tr>
+            <tr>
+                <td>enter operator</td>
+                <td><input type="text" name="opr"></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="fun()" value="show result"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

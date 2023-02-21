@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <script>
+        var count = 0;
+
+        function fun() {
+            f1.uname.style.border = "2px solid black";
+            if (count == 0) {
+                err.innerHTML = "please Enter User Name!!";
+                err.style.color = "green";
+            }
+            else {
+                err.style.color = "red";
+                err.innerHTML = "please Fill Correct uname!!!";
+            }
+            count++;
+        }
+
+        function fun1() {
+            var p2 = '(^[A-Z]{1,1})+([a-z]{1,10})$'
+            var u = f1.uname.value;
+
+            if (u.match(p2)) {
+
+                err2.innerHTML = "<img src='correct.png' height='30px' width='30px'>";
+                err.innerHTML = "";
+                f1.email.focus();
+
+            }
+            else {
+                err.innerHTML = "Please Fill correct uname!!!";
+                err2.innerHTML = "";
+                f1.uname.value = "";
+                err.style.color = "red";
+                f1.uname.focus();
+            }
+        }
+        function key1() {
+            err.innerHTML = "";
+        }
+        function sub1() {
+            var u = f1.uname.value;
+            var p2 = '(^[A-Z]{1,1})+([a-z]{1,10})$'
+
+            if (u == "") {
+                err.innerHTML = "Please fill user name";
+                return false;
+            }
+            if (u.match(p2)) {
+                f1.uname.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form name="f1" action="thanku.html" onsubmit="return sub1()">
+        <table align="center" cellpadding="5">
+            <tr>
+                <td>Enter User Name id</td>
+                <td><input type="text" name="uname" onfocus="fun()" onblur="fun1()" autocomplete="off"></td>
+                <td id="err2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="err"></td>
+            </tr>
+            <tr>
+                <td>Enter Email id</td>
+                <td><input type="email" name="email" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="err1"></td>
+            </tr>
+            <tr>
+                <td>Enter Password</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+
+</html>

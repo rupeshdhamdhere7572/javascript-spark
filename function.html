@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //function is javascript
+        // function-function is self contained block of code/ Program 
+        // function means group of statements.
+        // function  defination-function body
+        // function calling
+        
+        // 1.no prameter no return
+        // 2.with parameter without return
+        // 3.with parameter with return
+        // 4.no parameter with return
+        // 1.no prameter no return
+//         function fun()
+//         {
+//             var a=10,b=20;
+//             alert(a+b);
+//             alert("I am in fun block");
+    }
+     function fun1()
+ {     
+    alert("i am in fun1 block");
+ }
+fun1()
+   // 2.with parameter without return
+   function show(a);
+   {
+    var b=a.value;
+    var vowel=0;
+    var cons=0;
+    for(var i=0;i<b.length;i++)
+    {
+        if(b[i]=='a'||b[i]=='e' || b[i] =='i' || b[i] =='o' || b[i] =='u')
+        {
+            vowel++;
+        }
+        else 
+        {
+            cons++;
+
+        }
+    }
+console.log('vowel:-${vowel} and  Consonants:-&(cons)');
+hed.innerHTML="vowels:-"+vowel+"Consonants:-"+cons;
+   }
+
+    </script>
+</head>
+<body onload="load()">
+    <button onclick="fun()">click me</button>
+    <input type="text" placeholder="enter your name" id="t1">
+    <button onclick="show(t1)">show</button>
+    
+</body>
+</html>

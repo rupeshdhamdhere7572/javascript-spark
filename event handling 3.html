@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event handling</title>
+    <style>
+      div {
+        border: 2px solid red;
+        height: 400px;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn1">Add new para</button>
+    <button id="btn2">Remove para</button>
+    <div id="d1"></div>
+
+    <script type="text/javascript">
+      document.getElementById("btn1").addEventListener("mouseover", fun1);
+      document.getElementById("btn2").addEventListener("mouseout", fun2);
+      function fun1() {
+        var newdiv = document.createElement("div");
+        var para = document.createElementById("p");
+        newdiv.style.border = "2px  solid red";
+        newdiv.style.width = "300px";
+        newdiv.style.height = "300px";
+
+        para.innerHTML = "This is new para";
+        document.body.append(para);
+        para.style.color = "blue";
+        // para.style.border = "2px solid red";
+        //    para.style.backgroundColor = "yellow";
+        //    para.style.padding = "20px";
+        parent.appendChild(para);
+        document.body.append(newdiv);
+      }
+      function fun2() {
+        newdiv.remove();
+      }
+    </script>
+  </body>
+</html>

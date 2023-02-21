@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function fun3()
+    {
+       document.getElementById("uname").style.border="2px solid black";
+       p1.innerHTML="Enter Your Name";
+
+    }
+
+    function fun4()
+    {
+        var v1 = f1.uname.value;
+       if(v1=="")
+       {
+        p1.innerHTML="Enter Your Name";
+       }
+       else
+       {
+       p1.innerHTML="";
+       }
+     
+    }
+
+    function fun()
+    {
+        var p ="(^[A-Z]{1,1})+([a-z]{1,9})$";
+        var n = f1.uname.value;
+        if(n.match(p))
+        {
+            p1.innerHTML="Correct";
+            t1.innerHTML="";
+
+        }
+        else
+        {
+          t1.innerHTML="Enter Valid Name";
+          t1.style.color="red";
+          t1.style.fontWeight="bold";
+          p1.innerHTML="";
+          f1.uname.value="";
+          f1.uname.focus();
+
+        }
+    }
+
+    function fun1()
+    {
+        var p =  f1.uname.value;
+        var a ="(^[A-Z]{1,1})+([a-z]{1,9})$";
+        var n = f1.uname.value;
+        if(p=="")
+        {
+            p1.innerHTML="Enter Name";
+            f1.uname.focus();
+            return false;
+        }
+       
+       
+        else if(!n.match(a))
+        {
+          t1.innerHTML="Enter Valid Name";
+          t1.style.color="red";
+          t1.style.fontWeight="bold";
+          p1.innerHTML="";
+          f1.uname.value="";
+          f1.uname.focus();
+          return false;
+        }
+       else
+       {
+        p1.innerHTML="Correct";
+       }
+
+        if(f1.gen[0].checked==false && f1.gen[1].checked==false)
+        {
+           err.innerHTML="Please Select Gender";
+           return false;
+        }
+        else
+        {
+            return true;
+        }
+
+    }
+
+    </script>
+</head>
+<body>
+
+    <center><form action="success.html" onsubmit="return fun1()" name="f1">
+        <table>
+            <tr>
+    <td> <input type="text" placeholder="Enter Your Name" id="uname" name="uname" onblur="fun()" onfocus="fun3()" onkeyup="fun4()"></td>
+    <td id="p1"></td></tr>
+    <tr>
+    <td><span id="t1"></span></td></tr>
+    <tr>
+        <td> <input type="text" placeholder="Enter Your Mobile Number" name="mno"></td></tr>
+        <td><span id="t2"></span></td></tr>
+
+    <tr>
+            <td> <input type="text" placeholder="Enter Email" name="email"></td></tr>
+            <td><span id="t3"></span></td></tr>
+    <tr>
+                <td> <input type="radio" placeholder="Enter Gender" name="gen">Male <input type="radio" placeholder="Enter Gender" name="gen">Female </td>
+           <td id="err"></td>
+           
+            </tr>
+
+                
+    <tr>
+        <td><input type="submit" value="Submit"></td>
+    </tr>
+</table>
+
+    </form></center>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>stopclock</title>
+</head>
+
+<body>
+     <h1 id="hed">Welcome To Spark</h1>
+     <button onclick="start()"> Start Clock</button>
+     <button onclick="stop()"> Stop Clock</button>
+     <h3 id="hed1"></h3>
+     <script type="text/javascript">
+          var interval
+          function start() {
+               interval = setInterval(function () {
+                    var d = new Date();
+                    var time = d.toLocaleTimeString();
+                    hed1.innerHTML = time;
+
+               }, 1000)
+          }
+          function stop() {
+               clearInterval(interval);
+          }
+     </script>
+
+</body>
+
+</html>
